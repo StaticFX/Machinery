@@ -8,7 +8,7 @@ import kotlin.system.exitProcess
 val MAIN_MENU = Menu("Main-Menu"
     , mutableListOf(Option("Play") {_,opt -> println(opt.title)},
         Option("Load") {_,opt -> println(opt.title)},
-        Option("Back1") {_,_ -> exitProcess(0) },
+        Option("Back1 123456789") {_,_ -> exitProcess(0) },
         Option("Back2") {_,_ -> exitProcess(0) },
         Option("Back3") {_,_ -> exitProcess(0) },
         Option("Back4") {_,_ -> exitProcess(0) },
@@ -24,7 +24,7 @@ val MAIN_MENU = Menu("Main-Menu"
         Option("Back14") {_,_ -> exitProcess(0) },
         Option("Back15") {_,_ -> exitProcess(0) },
         Option("Back16") {_,_ -> exitProcess(0) },
-        Option("Back17") {_,_ -> exitProcess(0) })
+        Option("Back17 123456789") {_,_ -> exitProcess(0) })
     , backOption = false)
 
 object MenuManager {

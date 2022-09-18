@@ -25,7 +25,7 @@
    <left>
       <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
          <Label fx:id="label_menu" style="-fx-text-fill: white; -fx-font-size: 20;" text="Menu" />
-         <TextFlow fx:id="ta_menu" prefHeight="9999.0" prefWidth="100.0" style="-fx-background-color: black; -fx-border-color: white;" styleClass="menu" stylesheets="@main.css" />
+         <TextFlow fx:id="ta_menu" minHeight="200" prefHeight="9999.0" prefWidth="100.0" style="-fx-background-color: black; -fx-border-color: white;" styleClass="menu" stylesheets="@main.css" />
       </VBox>
    </left>
 </BorderPane>

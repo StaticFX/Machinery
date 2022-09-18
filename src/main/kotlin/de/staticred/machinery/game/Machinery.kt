@@ -11,12 +11,15 @@ object Machinery {
     private val scheduler = ScheduledThreadPoolExecutor(1)
 
     fun start() {
-        scheduler.scheduleAtFixedRate({ tick() }, 0, 10, TimeUnit.MILLISECONDS)
+        scheduler.scheduleAtFixedRate({ tick() }, 0, 1, TimeUnit.MILLISECONDS)
     }
 
 
     private fun tick() {
         RenderManager.render()
         MenuManager.handleCurrentKeyStrokes()
+
+
+
     }
 }

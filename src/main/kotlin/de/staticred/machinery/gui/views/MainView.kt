@@ -3,6 +3,8 @@ package de.staticred.machinery.gui.views
 import de.staticred.machinery.gui.util.ScalingTextArea
 import javafx.scene.control.Label
 import javafx.scene.layout.Pane
+import javafx.scene.paint.Color
+import javafx.scene.text.Text
 import javafx.scene.text.TextAlignment
 import javafx.scene.text.TextFlow
 import tornadofx.View
@@ -20,8 +22,10 @@ class MainView: View("Machinery") {
     val textAreaMenu: ScalingTextArea = ScalingTextArea(_textAreaMenu)
 
     init {
-        textAreaMain.textArea.textAlignment = TextAlignment.JUSTIFY
+        textAreaMain.textArea.textAlignment = TextAlignment.CENTER
         textAreaMenu.textArea.textAlignment = TextAlignment.JUSTIFY
+
+        textAreaMain.textArea.children.add(Text("======================================").apply { fill = Color.RED })
 
         textAreaMain.textArea.heightProperty().addListener { _,_,new -> run {
             textAreaMain.setScalingHeight(new.toDouble())

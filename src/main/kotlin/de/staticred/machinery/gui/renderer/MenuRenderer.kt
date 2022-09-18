@@ -11,7 +11,7 @@ import kotlin.math.roundToInt
 class MenuRenderer(private val textFlow: TextFlow, private val label: Label): Renderer<Menu> {
 
 
-    private val maxTextLength = 100
+    private var page = 0
 
     override fun render(t: Menu) {
         label.text = t.title
@@ -46,7 +46,10 @@ class MenuRenderer(private val textFlow: TextFlow, private val label: Label): Re
         val fitValues = (height / 17).roundToInt()
 
         if (count > fitValues) {
-            textFlow.children.addAll(text.slice(index until text.size.coerceAtMost((index + fitValues))))
+
+            page = index / fitValues
+
+            textFlow.children.addAll(text.slice(fitValues * page until (fitValues * (page + 1)).coerceAtMost(text.size)))
         } else {
             textFlow.children.addAll(text)
         }
