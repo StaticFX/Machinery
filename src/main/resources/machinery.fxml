@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="300.0" minWidth="500.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <TextFlow fx:id="ta_main" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black; -fx-border-color: white;" stylesheets="@main.css" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <ImageView fitHeight="50.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+            <Image url="@logo.png" />
+         </ImageView>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <Label fx:id="label_menu" style="-fx-text-fill: white; -fx-font-size: 20;" text="Menu" />
+         <TextFlow fx:id="ta_menu" prefHeight="9999.0" prefWidth="100.0" style="-fx-background-color: black; -fx-border-color: white;" styleClass="menu" stylesheets="@main.css" />
+      </VBox>
+   </left>
+</BorderPane>

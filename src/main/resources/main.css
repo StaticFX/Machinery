@@ -1,0 +1,16 @@
+@font-face {
+    src: url("PIXELADE.TTF");
+}
+
+.root {
+    -fx-font-family: pixelade ;
+}
+
+TextFlow {
+    -fx-background-color: black;
+    -fx-border-color: white;
+}
+
+.menu {
+    -fx-font-size: 15;
+}
