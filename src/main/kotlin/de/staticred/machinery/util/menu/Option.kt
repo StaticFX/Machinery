@@ -9,5 +9,4 @@ class Option(val title: String, private val execute: (prevMenu: Menu, option: Op
     fun execute() {
         execute(MenuManager.previousMenus, MenuManager.currentMenu.selectedOption)
     }
-
 }

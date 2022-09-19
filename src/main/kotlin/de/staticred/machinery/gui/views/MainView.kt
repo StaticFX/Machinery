@@ -25,11 +25,8 @@ class MainView: View("Machinery") {
         textAreaMain.textArea.textAlignment = TextAlignment.CENTER
         textAreaMenu.textArea.textAlignment = TextAlignment.JUSTIFY
 
-        textAreaMain.textArea.children.add(Text("======================================").apply { fill = Color.RED })
-
         textAreaMain.textArea.heightProperty().addListener { _,_,new -> run {
             textAreaMain.setScalingHeight(new.toDouble())
         } }
     }
-
 }
