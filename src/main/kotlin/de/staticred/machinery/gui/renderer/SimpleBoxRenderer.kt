@@ -3,6 +3,7 @@ package de.staticred.machinery.gui.renderer
 import de.staticred.machinery.util.box.Box
 import javafx.scene.paint.Color
 import javafx.scene.text.Text
+import javafx.scene.text.TextAlignment
 import javafx.scene.text.TextFlow
 import tornadofx.add
 
@@ -18,8 +19,10 @@ class SimpleBoxRenderer(private val textFlow: TextFlow): Renderer<Box> {
 
         widthText.text += "╔"
         for (i in 0 until t.width) {
-            widthText.text += (if (t.thick) "═" else "-")
+            widthText.text += ("═")
         }
+
+
         widthText.text += "╗\n"
         textFlow.children.add(widthText)
 
@@ -28,6 +31,8 @@ class SimpleBoxRenderer(private val textFlow: TextFlow): Renderer<Box> {
             heightText.text += "║"
 
             textFlow.children.add(heightText)
+
+
 
             val filler = Text()
             for (j in 0 until t.width) {
@@ -44,11 +49,26 @@ class SimpleBoxRenderer(private val textFlow: TextFlow): Renderer<Box> {
 
         widthTextBottom.text += "╚"
         for (i in 0 until t.width) {
-            widthTextBottom.text += (if (t.thick) "═" else "-")
+            widthTextBottom.text += "═"
         }
         widthTextBottom.text += "╝"
         textFlow.children.add(widthTextBottom)
 
 
     }
+
+    private fun getPixelWidthForFiller(fillerWidth: Int): Double {
+        return getPixelWidthOf("═".repeat(fillerWidth))
+    }
+
+    private fun getPixelWidthOf(string: String): Double {
+        val text = Text(string)
+        return text.layoutBounds.width
+    }
+
+    private fun getPixelHeightOf(string: String): Double {
+        val text = Text(string)
+        return text.layoutBounds.height
+    }
+
 }

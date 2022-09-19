@@ -16,7 +16,7 @@ object RenderManager {
     fun render() {
         Platform.runLater {
             menuRenderer.render(MenuManager.currentMenu)
-            boxRenderer.render(Box(20, 20, true))
+            boxRenderer.render(Box(20, 20, "Test"))
         }
     }
 }

@@ -18,8 +18,5 @@ object Machinery {
     private fun tick() {
         RenderManager.render()
         MenuManager.handleCurrentKeyStrokes()
-
-
-
     }
 }
