@@ -12,6 +12,10 @@ object Machinery {
 
     fun start() {
         scheduler.scheduleAtFixedRate({ tick() }, 0, 1, TimeUnit.MILLISECONDS)
+
+
+
+        
     }
 
 

@@ -43,7 +43,7 @@ class Machinery: App(MainView::class) {
         }}
 
         stage.heightProperty().addListener { _,old,new -> run {
-            var width = stage.width
+            val width = stage.width
             var ratio = new.toDouble() / width
 
             if (ratio > 0.8) {
